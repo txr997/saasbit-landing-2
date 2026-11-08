@@ -1,0 +1,241 @@
+/* 
+    footer-start
+*/
+
+
+/* the beam + logo circle sit this far right of the page centre (the beam art is not symmetric) */
+$ani-offset: 27px;
+
+.footer-ani {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-left: $ani-offset;
+    }
+
+    
+    .ani-glow {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        z-index: -1;
+
+        @media #{$md,$xs} {
+            display: none;
+        }
+
+        img {
+            min-width: max-content;
+        }
+
+
+    }
+
+
+    &-favicon {
+        width: 152px;
+        height: 152px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        margin-top: -160px;
+
+        &-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            box-shadow: 0px 0px 60px #ddbaff;
+        }
+
+        img {
+            transform: scale(1.5);
+        }
+    }
+
+}
+
+.px-footer {
+
+    &-area {
+        padding-bottom: 20px;
+    }
+
+
+
+
+
+    &-content {
+        text-align: center;
+        max-width: 1100px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 128px;
+        margin-top: -108px;
+
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            margin-top: 40px;
+        }
+
+        .title {
+            color: #fff;
+            line-height: 1.1;
+            font-size: 80px;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin-bottom: 20px;
+            /* below 1600px the title is plain text: break it into even lines, no lone "Theme" */
+            text-wrap: balance;
+
+            /*
+                wide screens: "Download [logo circle] Saasbit" on one line. A 3-column grid keeps the
+                circle centred between the two words whatever their widths (before, the longer
+                word ran under the circle). Smaller screens: the circle sits above, plain text.
+            */
+            .has-flex {
+                display: grid;
+                grid-template-columns: 1fr 196px 1fr;
+                align-items: baseline;
+                position: relative;
+                left: $ani-offset * 0.5;
+
+                > span:first-child {
+                    grid-column: 1;
+                    text-align: right;
+                }
+
+                > span:last-child {
+                    grid-column: 3;
+                    text-align: left;
+                }
+
+                @media #{$xxl,$xl,$lg,$md,$xs} {
+                    display: inline-block;
+                    left: 0;
+                }
+
+            }
+
+            .has-clr {
+                color: var(--px-clr-pr-1);
+            }
+                        
+            @media #{$xxl} {
+                font-size: 70px;
+            }
+
+            @media #{$xl} {
+                font-size: 60px;
+            }
+
+            @media #{$lg} {
+                font-size: 50px;
+            }
+
+            @media #{$md} {
+                font-size: 40px;
+            }
+
+            @media #{$xs} {
+                font-size: 30px;
+            }
+
+            @media #{$sm} {
+                font-size: 35px;
+            }
+        }
+
+        .disc {
+            font-size: 22px;
+            /* colour, not opacity: the wow fadeInUp ends at opacity 1 and would cancel an opacity here */
+            color: rgb(255 255 255 / 80%);
+            font-weight: 400;
+            margin-bottom: 45px;
+        }
+
+    }
+    
+
+    &-dvr-line {
+        width: 100%;
+        height: 1px;
+        background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #060606 100%);
+        opacity: 0.48;
+        margin-bottom: 20px;
+    }
+
+    &-bottom {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        @media #{$md,$xs} {
+            justify-content: center;
+        }
+
+
+        .design, .copyright-text  {
+            color: #fff;
+
+            i {
+                color: #EF5350;
+            }
+            a {
+                color: var(--px-clr-pr-1);
+                transition: all .5s var(--px-cube-1);
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+
+
+    &-bottom {
+        &-social {
+            display: flex;
+            gap: 12px;
+
+            .link-elm {
+                background: #050221;
+                box-shadow: inset 0px -1px 1px rgba(255, 255, 255, 0.53);
+                width: 44px;
+                height: 44px;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                transition: all .5s var(--px-cube-1);
+
+                &:hover {
+                    color: var(--px-clr-pr-1);
+                    box-shadow: inset 0px -1px 1px var(--px-clr-pr-1);
+                }
+            }
+        }
+    }
+    
+}
+
+
+/* 
+    footer-end
+*/

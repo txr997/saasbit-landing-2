@@ -1,0 +1,135 @@
+.px-hero {
+    &-area {
+        margin-top: 91px;
+        padding-top: 165px;
+        padding-bottom: 235px;
+
+        @media #{$xs} {
+            padding-bottom: 235px;
+        }
+    }
+
+    &-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -3;
+        background-color: #000;
+
+        img {
+            opacity: .5;
+        }
+    }
+
+    &-content {
+        max-width: 550px;
+
+        .logo {
+            margin-bottom: 35px;
+        }
+
+        .title {
+            color: var(--px-clr-white-1);
+            margin-bottom: 54px;
+        }
+
+        .btn-wrap {
+            display: flex;
+            gap: 48px;
+            flex-wrap: wrap;
+        }
+    }
+
+    &-demo {
+        display: inline-flex;
+        position: absolute;
+        right: 140px;
+        bottom: -130px;
+        transform: rotate(11.58deg);
+        z-index: -2;
+        width: 52%;
+
+        @media #{$lg} {
+            right: 120px;
+            bottom: -190px;
+        }
+
+        @media #{$md} {
+            bottom: -250px;
+        }
+
+        @media #{$xs} {
+            bottom: -410px;
+        }
+
+        &-single {
+            filter: drop-shadow(-12px -4px 28px rgba(0, 0, 0, 0.5));
+            border-radius: 8px;
+            overflow: hidden;
+            margin-right: -135px;
+            position: relative;
+
+            &:nth-child(1) {
+                z-index: 5;
+                margin-top: 386px;
+            }
+
+            &:nth-child(2) {
+                z-index: 4;
+                margin-top: 280px;
+            }
+
+            &:nth-child(3) {
+                z-index: 3;
+                margin-top: 180px;
+            }
+
+            &:nth-child(4) {
+                z-index: 2;
+            }
+
+            &:nth-child(5) {
+                margin-top: 63px;
+            }
+        }
+    }
+    
+    &-shape {
+        position: absolute;
+        bottom: -21px;
+        right: 0;
+        z-index: -1;
+
+        &-single {
+            &:nth-child(2) {
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+                z-index: -1;
+            }
+            &:nth-child(3) {
+                position: absolute;
+                bottom: 20px;
+                right: 0;
+                z-index: -2;
+            }
+        }
+
+
+    }
+
+    &-illus {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+
+        @media #{$xs} {
+            display: none;
+        }
+    }
+}
+
+

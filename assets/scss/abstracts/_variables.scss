@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+:root {
+    scroll-behavior: inherit;
+	
+	--px-font-1:  "Inter", sans-serif;
+    
+	--px-clr-pr-1: #6342F5;
+	--px-clr-sd-1: #8B5BFA;
+
+	--px-clr-h-1: #0A0E0E;
+	--px-clr-p-1: #212527;
+
+	--px-clr-white-1: #ffffff;
+	--px-clr-black-1: #000000;
+
+	--px-cube-1:  cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+
+
+/* 
+    root-variable-end
+*/
+
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'(max-width: 767px)';

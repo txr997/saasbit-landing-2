@@ -1,0 +1,51 @@
+/* 
+    inner-page-start
+*/
+.px-inner-page {
+    &-area {
+        background-color: #F5F5F6;
+    }
+
+
+    &-counter {
+        font-weight: 700;
+        font-size: 200px;
+        letter-spacing: 0.02em;
+        line-height: 1;
+        background: linear-gradient(180deg, #FA9145 0%, #F5F5F6 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        margin-bottom: -75px;
+
+        @media #{$xs} {
+            font-size: 100px;
+        }
+
+        @media #{$sm} {
+            font-size: 140px;
+        }
+    }
+
+
+    &-wrap {
+        display: flex;
+        gap: 40px;
+        margin-right: 40px;
+    }
+    
+    &-ss {
+        flex: 0 0 auto;
+        height: 290px;
+        width: 520px;
+        outline: 10px solid #fff;
+        border-radius: 16px;
+    }
+
+
+    
+}
+/* 
+    inner-page-end
+*/

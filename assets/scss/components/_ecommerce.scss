@@ -1,0 +1,73 @@
+/* 
+    ecommerce-start
+*/
+.nm-ecommerce {
+    &-area {
+        background: linear-gradient(180deg, #ECE8FF 0%, #FFFFFF 100%);
+        border-radius: 20px;
+        margin-left: 16px;
+        margin-right: 16px;
+        padding-top: 190px;
+        padding-bottom: 130px;
+
+        @media #{$md,$xs} {
+            padding-top: 100px;
+            padding-bottom: 100px;
+        }
+    }
+
+    &-img {
+        width: 59%;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        z-index: -1;
+        text-align: right;
+
+        @media #{$lg} {
+            top: 74%;
+        }
+        @media #{$md,$xs} {
+            width: 100%;
+            position: unset;
+            transform: unset;
+        }
+    }
+
+    &-content {
+        max-width: 660px;
+
+        .sec-disc {
+            margin-top: 25px;
+            opacity: 80%;
+        }
+
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+        margin-top: 27px;
+
+        li {
+            display: flex;
+            align-items: baseline;
+            gap: 10px;
+            color: #000;
+
+            i {
+                color: var(--px-clr-sd-1);
+            }
+        }
+    }
+    
+}
+
+
+
+
+/* 
+    ecommerce-end
+*/

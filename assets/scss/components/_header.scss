@@ -1,0 +1,168 @@
+
+/* 
+  header-1-css-start
+*/
+
+
+.sticky_header_1 {
+
+  &:is(.sticky1) {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 10px 0;
+    animation: slideInDown .7s var(--px-cube-1);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  }
+
+  /* leaving the sticky state: slide out first, main.js removes the classes afterwards */
+  &:is(.sticky1-out) {
+    animation: slideOutUp .4s var(--px-cube-1) forwards;
+  }
+}
+
+@keyframes slideInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutUp {
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+.px-header-1 {
+
+  &-area {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 24px;
+    z-index: 5;
+  }
+
+  &-row {
+    gap: 54px;
+  }
+
+  &-action-link {
+    gap: 30px;
+
+    @media #{$xs} {
+      gap: 10px;
+    }
+
+    .px-menu-btn-1 {
+      @media #{$over,$xxxl,$xxl,$xl,$lg} {
+        display: none;
+      }
+    }
+
+
+
+    .pf-pr-1 {
+      padding: 9px 16px;
+
+      @media #{$xs} {
+        display: none;
+      }
+      @media #{$sm} {
+        display: flex;
+      }
+    }
+
+  }
+
+}
+
+
+
+.main-navigation {
+  margin-left: auto;
+  ul {
+    display: flex;
+    align-items: center;
+    gap: 44px;
+    flex-direction: row;
+
+    li {
+      display: inline-block;
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: var(--px-clr-sd-1);
+        position: absolute;
+        left: -25px;
+        top: 19px;
+      }
+
+      &:nth-last-child(1) {
+        &::before {
+          content: "";
+          width: 4px;
+          height: 4px;
+          border-radius: 50%;
+          background: var(--px-clr-sd-1);
+          position: absolute;
+          right: -20px;
+          top: 19px;
+        }
+      }
+
+      a {
+        position: relative;
+        z-index: 1;
+        font-family: var(--px-font-1);
+        font-size: 17px;
+        font-weight: 500;
+        text-decoration: none;
+        color: var(--px-clr-h-1);
+        padding: 13px 0;
+        display: inline-block;
+        text-transform: capitalize;
+        line-height: 1;
+        transition: all .5s var(--px-cube-1);
+      }
+
+      &:hover {
+        > a {
+          color: var(--px-clr-pr-1);
+          transform: translateY(3px);
+        }
+      }
+    }
+  }
+}
+
+/* 
+  header-1-css-end
+*/
